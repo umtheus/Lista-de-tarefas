@@ -3,7 +3,7 @@ import { HeaderComponent } from './header.component';
 import { By } from '@angular/platform-browser';
 
 describe('HeaderComponent', () => {
-  let component: HeaderComponent;
+  // let component: HeaderComponent;
   let fixture: ComponentFixture<HeaderComponent>;
 
   beforeEach(async () => {
@@ -19,6 +19,6 @@ describe('HeaderComponent', () => {
   it('deve renderizar o titulo', () => {
     const h1DebugEl = fixture.debugElement.query(By.css('h1'));
 
-    expect(h1DebugEl.nativeElement.textContent).toBe('Gerenciador de 2tarefas');
+    expect(h1DebugEl.nativeElement.textContent).toBe('Gerenciador de tarefas');
   });
 });
