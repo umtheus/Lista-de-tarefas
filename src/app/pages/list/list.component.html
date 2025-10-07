@@ -1,1 +1,28 @@
-<p>list works!</p>
+<section
+  data-testid="todo-list"
+  class="w-full flex flex-col items-center mt-10"
+>
+  <h1 class="text-3xl">Tarefas Pendentes</h1>
+
+  @for(task of pendingTasks(); track task.title ){
+  <div class="w-1/2 text-center mt-5" data-testid="todo-list-item">
+    <div class="bg-slate-700 p-3 rounded-xl">
+      <h2 class="text-xl font-semibold">{{ task.title }}</h2>
+    </div>
+  </div>
+  }
+</section>
+
+<section
+  data-testid="completed-list"
+  class="w-full flex flex-col items-center mt-10"
+>
+  <h1 class="text-3xl">Tarefas Concluidas</h1>
+  @for(task of completedTasks(); track task.title ){
+  <div class="w-1/2 text-center mt-5" data-testid="completed-list-item">
+    <div class="bg-slate-700 p-3 rounded-xl">
+      <h2 class="text-xl font-semibold">{{ task.title }}</h2>
+    </div>
+  </div>
+  }
+</section>
